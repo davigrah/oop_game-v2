@@ -3,11 +3,11 @@
  * Phrase.js */
 
 class Phrase {
-    constructor(phrase){
-        this.phrase = toLowerCase((phrase))
-    }
+  constructor (phrase) {
+    this.phrase = phrase.toLowerCase()
+  }
 
-    addPhraseToDisplay() {
-        
-    }
+  // addPhraseToDisplay() {
+
+  // }
 }
