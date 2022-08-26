@@ -12,7 +12,7 @@ class Game {
       new Phrase('You talking to me'),
       new Phrase('I see dead people')
     ]
-    this.activePhrase = 'null'
+    this.activePhrase = null
   }
   /**
 * Selects random phrase from phrases property
@@ -22,4 +22,13 @@ class Game {
     const randomNumber = Math.floor(Math.random() * this.phrases.length)
     return this.phrases[randomNumber]
   }
+
+  /**
+* Begins game by selecting a random phrase and displaying it to user
+*/
+   startGame() {
+     document.getElementById('overlay').style.display = 'none'
+     this.activePhrase = this.getRandomPhrase()
+     this.activePhrase.addPhraseToDisplay()
+   }
 }
