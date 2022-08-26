@@ -20,6 +20,6 @@ class Game {
 */
   getRandomPhrase() {
     const randomNumber = Math.floor(Math.random() * this.phrases.length)
-    return phrases[randomNumber]
+    return this.phrases[randomNumber]
   }
 }

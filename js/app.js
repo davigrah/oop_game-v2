@@ -14,3 +14,6 @@
 
 // const randomNumber = Math.floor(Math.random() * phrases.length)
 //     console.log(phrases[randomNumber])
+
+const game = new Game()
+game.getRandomPhrase().addPhraseToDisplay()

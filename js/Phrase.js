@@ -7,7 +7,15 @@ class Phrase {
     this.phrase = phrase.toLowerCase()
   }
 
-  // addPhraseToDisplay() {
-
-  // }
+  addPhraseToDisplay () {
+    const splitPhrase = this.phrase.split('')
+    const phraseSection = document.getElementById('phraseSection')
+    for (let i = 0; i < splitPhrase.length; i++) {
+      if (splitPhrase[i] === ' ') {
+        phraseSection.innerHTML += '<li class="space"> </li>'
+      } else {
+        phraseSection.innerHTML += `<li class="hide letter ${splitPhrase[i]}">${splitPhrase[i]}</li>`
+      }
+    }
+  }
 }
