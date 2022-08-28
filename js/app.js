@@ -6,5 +6,5 @@ const startButton = document.getElementById('btn__reset')
 startButton.addEventListener('click', (e) => {
   game.startGame()
   game.checkLetter('a')
-  game.showMatchedLetter()
+//   game.showMatchedLetter()
 })

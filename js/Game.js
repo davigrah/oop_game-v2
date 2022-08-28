@@ -34,30 +34,22 @@ class Game {
     this.activePhrase.addPhraseToDisplay()
   }
 
-  checkLetter () {
-    const qwerty = document.getElementsByClassName('key')
-    for (let i = 0; i < qwerty.length; i++) {
-      qwerty[i].addEventListener('click', (e) => {
-        this.chosenLetter = qwerty[i].textContent
-        console.log(this.chosenLetter)
-        const letter = document.getElementsByClassName('letter')
-        console.log(letter[i])
-        if (this.chosenLetter === letter[i].textContent) {
-          console.log(letter.textContent[i])
-          letter[i].classList = 'show'
-        }
-      })
+  checkLetter(letter) {
+    const phraseArray = this.activePhrase.split("")
+    if (phraseArray.includes(letter)) {
+      return true
+    } else {
+      return false
     }
   }
-
-  showMatchedLetter () {
-    for (let i = 0; i < this.activePhrase.length; i++) {
-      const letter = document.getElementsByClassName('letter')
-      if (this.chosenLetter === this.activePhrase[i]) {
-        letter[i].className = 'show'
-      }
-    }
-  }
+  // showMatchedLetter () {
+  //   for (let i = 0; i < this.activePhrase.length; i++) {
+  //     const letter = document.getElementsByClassName('letter')
+  //     if (this.chosenLetter.textContent === this.activePhrase[i].textContent) {
+  //       console.log(`the letter ${letter[i]} matched`)
+  //     }
+  //   }
+  // }
 
   // handleInteraction () {}
 }
