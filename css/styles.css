@@ -192,6 +192,8 @@ button {
 
 .win {
   background-color: var(--color-win);
+  display: flex;
+  flex-direction: column;
 }
 
 .win a {
@@ -200,6 +202,8 @@ button {
 
 .lose {
   background-color: #bb4430;
+  display: flex;
+  flex-direction: column;
 }
 
 .lose a {

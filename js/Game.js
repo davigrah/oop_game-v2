@@ -75,11 +75,11 @@ won
   gameOver (gameWon) {
     const message = document.getElementById('game-over-message')
     if (gameWon) {
-      startScreen.style.display = 'initial'
+      startScreen.style.display = ''
       startScreen.className = 'win'
       message.innerHTML = 'You win!'
     } else {
-      startScreen.style.display = 'initial'
+      startScreen.style.display = ''
       startScreen.className = 'lose'
       message.innerHTML = `You lose! The phrase was <em>"${this.activePhrase.phrase}"</em>`
     }
