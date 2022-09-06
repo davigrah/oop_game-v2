@@ -1,6 +1,8 @@
 /* Treehouse FSJS Techdegree
  * Project 4 - OOP Game App
  * Phrase.js */
+const phraseDiv = document.getElementById('phrase')
+
 
 class Phrase {
   constructor (phrase) {
@@ -19,6 +21,29 @@ class Phrase {
     }
   }
 
-  
+  /**
+* Checks if passed letter is in phrase
+* @param (string) letter - Letter to check
+*/
+  checkLetter (letter) {
+    if (this.phrase.includes(letter)) {
+      this.showMatchedLetter(letter)
+      return true
+    } else {
+      return false
+    }
+  }
 
+  /**
+* Displays passed letter on screen after a match is found
+* @param (string) letter - Letter to display
+*/
+  showMatchedLetter (letter) {
+    const lettersInPhrase = ul.children
+    for (let i = 0; i < lettersInPhrase.length; i++) {
+      if (letter === lettersInPhrase[i].textContent) {
+        lettersInPhrase[i].className = `show letter ${letter}`
+      }
+    }
+  }
 }
