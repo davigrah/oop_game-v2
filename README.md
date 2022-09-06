@@ -26,6 +26,7 @@
 <p> checkForWin() method that checks if the player has revealed all of the letters in the active phrase;</p>
 <p>removeLife() method that removes a life from the scoreboard (one of the liveHeart.png images is replaced with a lostHeart.png image), increments the missed property, and if the player has lost the game calls the gameOver() method;</p>
 <p>gameOver() method that displays a final "win" or "loss" message by showing the original start screen overlay styled with either the win or lose CSS class;</p>
+<p>Event listener added for the keydown or keyup event so that pressing a physical keyboard button results in the handleInteraction() method being called for the associated onscreen keyboard button</p>
 <p>App styles have been personalized with a new color palette.</p>
 
 ### ✨ [Demo](https://oop-game-show-app.vercel.app)
